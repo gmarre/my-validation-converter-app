@@ -1,28 +1,32 @@
-// App.js
 import React, { useState } from 'react';
-import ScenarioForm from './ScenarioForm';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  const [scenarios, setScenarios] = useState([]);
 
-  const handleAddScenario = (scenario) => {
-    setScenarios([...scenarios, scenario]);
+function App() {
+  const [response, setResponse] = useState(null);
+
+  const handleButtonClick = async () => {
+    try {
+      const res = await axios.post('http://localhost:5000/create-docx', {
+        content: 'Hello from React!',
+      });
+
+      setResponse(res.data);
+    } catch (error) {
+      console.error('Error creating docx:', error);
+    }
   };
 
   return (
-    <div className="App">
-      <h1>Application de Scénarios</h1>
-      <ScenarioForm onAddScenario={handleAddScenario} />
-      {/* Afficher les scénarios */}
-      <div>
-        <h2>Scénarios</h2>
-        <ul>
-          {scenarios.map((scenario, index) => (
-            <li key={index}>{scenario}</li>
-          ))}
-        </ul>
-      </div>
+    <div>
+      <h1>React + Flask Docx Example</h1>
+      <button onClick={handleButtonClick}>Create Docx</button>
+      {response && (
+        <p>
+          Document created successfully!{' '}
+        </p>
+      )}
     </div>
   );
 }
