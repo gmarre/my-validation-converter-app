@@ -1,45 +1,27 @@
-/* App.css */
-
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+/* src/App.css */
+.app {
+  text-align: center;
+  margin-top: 50px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.head-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
-h1 {
-  color: #333;
-}
-
-button {
-  padding: 10px 15px;
-  font-size: 16px;
+.tab {
   cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-p {
-  margin-top: 20px;
-  color: #333;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
+.tab:hover {
   text-decoration: underline;
 }
+
+.tab.active {
+  font-weight: bold;
+}
+
+/* Add more styles as needed */

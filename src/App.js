@@ -1,32 +1,21 @@
+// src/App.js
 import React, { useState } from 'react';
-import axios from 'axios';
 import './App.css';
-
+import HeadBar from './components/HeadBar';
+import MainContent from './components/MainContent';
 
 function App() {
-  const [response, setResponse] = useState(null);
+  const tabs = ['Create VTP', 'From Docx to .tcl', 'Spec System', 'SRS', 'BDS'];
+  const [currentTab, setCurrentTab] = useState('Create VTP');
 
-  const handleButtonClick = async () => {
-    try {
-      const res = await axios.post('http://localhost:5000/create-docx', {
-        content: 'Hello from React!',
-      });
-
-      setResponse(res.data);
-    } catch (error) {
-      console.error('Error creating docx:', error);
-    }
+  const handleTabChange = (tab) => {
+    setCurrentTab(tab);
   };
 
   return (
-    <div>
-      <h1>React + Flask Docx Example</h1>
-      <button onClick={handleButtonClick}>Create Docx</button>
-      {response && (
-        <p>
-          Document created successfully!{' '}
-        </p>
-      )}
+    <div className="app">
+      <HeadBar tabs={tabs} currentTab={currentTab} onTabChange={handleTabChange} />
+      <MainContent currentTab={currentTab} />
     </div>
   );
 }
