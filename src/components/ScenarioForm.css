@@ -1,0 +1,60 @@
+/* src/components/ScenarioForm.css */
+
+.scenario-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .scenario-form label {
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .scenario-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .scenario-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .scenario-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .scenario-form strong {
+    display: block;
+    margin: 16px 0;
+    font-size: 18px;
+  }
+  
+  .scenario-form div {
+    margin-top: 16px;
+  }
+  
+  .scenario-form div button {
+    background-color: #008CBA;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .scenario-form div button:hover {
+    background-color: #007bb5;
+  }
+  
+  .scenario-form div div {
+    margin-top: 8px;
+  }
+  

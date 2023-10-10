@@ -16,7 +16,7 @@ function App() {
     <div className="app">
       <HeadBar tabs={tabs} currentTab={currentTab} onTabChange={handleTabChange} />
       <MainContent currentTab={currentTab} />
-    </div>
+    </div>                                                                                                                                                                                   
   );
 }
 

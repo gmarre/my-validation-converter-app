@@ -1,0 +1,56 @@
+/* src/components/StepForm.css */
+
+.step-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .step-form label {
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .step-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .step-form button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .step-form button:hover {
+    background-color: #27ae60;
+  }
+  
+  .step-form div {
+    margin-top: 16px;
+  }
+  
+  .step-form div button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .step-form div button:hover {
+    background-color: #c0392b;
+  }
+  
+  .step-form div div {
+    margin-top: 8px;
+  }
+  
